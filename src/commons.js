@@ -14,8 +14,14 @@ require('./style/main.scss');
 
 require('./images/logo_backway.svg');
 
+/////////////
+// Скрипты //
+/////////////
 
+window.jQuery = $;
+require('owl.carousel');
 
+require('./js/my-stcripts.js'); 
 /////////////////////////////////
 // Загрузка иконок для спрайта //
 /////////////////////////////////

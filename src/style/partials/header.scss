@@ -1,6 +1,12 @@
 .header {
     &__top {
         margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 25px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__middle {
         .container {
@@ -28,6 +34,83 @@
     }
 }
 
+.top-menu {
+    display: flex;
+    list-style: none;
+    padding: 5px 0;
+    margin-bottom: 0;
+    &__item {
+        margin: 0 5px;
+        &_dropdown {
+            position: relative;
+            .top-menu__link {
+                &:after {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: .255em;
+                    vertical-align: .255em;
+                    content: "";
+                    border-top: .3em solid;
+                    border-right: .3em solid transparent;
+                    border-bottom: 0;
+                    border-left: .3em solid transparent;
+                }
+            }
+            &:hover {
+                .top-menu__dropdown-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+    &__link {
+        display: block;
+        padding: 10px 15px;
+        font-size: .8em;
+        color: #666666;
+        text-transform: uppercase;
+        &:hover {
+            color: #333333;
+            background-color: rgba(0, 0, 0, 0.02);
+            text-decoration: none;
+        }
+    }
+    &__dropdown-menu {
+        position: absolute;
+        top: 40px;
+        background-color: #fff;
+        display: none;
+        z-index: 100;
+        box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+    &__dropdown-menu-item {
+        display: block;
+        line-height: 1.2em;
+        font-size: .8em;
+        color: #666666;
+        padding: 10px;
+        border-left: 3px solid transparent;
+        
+        &:hover {
+            color: #333333;
+            text-decoration: none; // background-color: rgba(0, 0, 0, 0.05);
+            border-left-color: $main-color;
+        }
+        &_accent {
+            background-color: $accent-color;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+            &:hover {
+                color: #ffffff;
+                background-color: darken($accent-color, 5%);
+                border-left-color: darken($accent-color, 5%);
+            }
+        }
+    }
+}
+
 .top-panel {
     display: flex;
     list-style: none;
@@ -40,17 +123,26 @@
 .top-panel-link {
     display: flex;
     align-items: center;
-    padding: 10px 10px;
-    color: #666666;
+    padding: 10px 15px;
+    color: #888888;
+    font-weight: 300;
+    font-size: .8em;
+    margin-left: 1px;
     &:hover {
         background-color: rgba(0, 0, 0, 0.02);
         color: #333333;
         text-decoration: none;
+        .top-panel-link__icon {
+            fill: #666;
+        }
+        .top-panel-link__text {
+            color: #000;
+        }
     }
     &__icon {
-        height: 24px;
-        width: 24px;
-        fill: #999;
+        height: 18px;
+        width: 18px;
+        fill: #bbb;
     }
     &__text {
         margin-left: 7px;
@@ -58,7 +150,7 @@
 }
 
 .logo {
-    width: 20%;
+    width: 350px;
     display: flex;
     align-items: center;
     &__image {
@@ -101,12 +193,13 @@
     display: flex;
     background-color: #fff;
     &__item {
-        padding: 10px 15px;
+        padding: 10px 20px;
         color: #666666;
         text-transform: uppercase;
-        font-size: .90em;
-        border-top:3px solid transparent;
-        border-bottom:3px solid transparent;
+        font-size: .95em;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        transition: border .05s ease-in 0s;
         &:hover {
             text-decoration: none;
             color: #333333;
@@ -120,12 +213,13 @@
     align-items: center;
     background-color: $accent-color;
     padding: 10px 20px;
-    font-size: .90em;
+    font-size: .95em;
     color: #ffffff;
     text-transform: uppercase;
     &:hover {
         text-decoration: none;
         color: #ffffff;
-        background-color: darken($accent-color, 2.5%);
+        background-color: darken($accent-color, 5%);
+        text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 }
