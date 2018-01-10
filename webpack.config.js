@@ -111,7 +111,7 @@ module.exports = {
             allChunks: true
         }),
         new webpack.ProvidePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV),
+            // NODE_ENV: JSON.stringify(NODE_ENV),
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',

@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+
 ///////////
 // Стили //
 ///////////
@@ -18,9 +21,17 @@ require('./images/logo_backway.svg');
 // Скрипты //
 /////////////
 
-import './js/my-stcripts.js'; 
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 
+import 'owl.carousel';
+
+import './js/my-stcripts.js';
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel();
+});
 
 
 /////////////////////////////////
