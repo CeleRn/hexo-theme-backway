@@ -1,5 +1,19 @@
+// $enable-caret:              true !default;
+$enable-rounded:            false;
+$enable-shadows:            true;
+// $enable-gradients:          false !default;
+// $enable-transitions:        true !default;
+// $enable-hover-media-query:  false !default;
+// $enable-grid-classes:       true !default;
+// $enable-print-styles:       true !default;
+
+
+
 $body-bg:#eceeef;
 $body-color: #292b2c;
+
+$component-active-color:      #333;
+$component-active-bg:         #eee;
 
 $block-bg: #fff;
 

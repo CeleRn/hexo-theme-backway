@@ -100,6 +100,11 @@ module.exports = {
                         loader: 'svgo-loader?' + svgoConfig
                     }
                 ]
+            },
+            {
+                test: /\.(png|json|xml|ico)$/,
+                include: path.join(__dirname, "src", "images", "favicons"),
+                loader: 'file-loader?name=images/favicons/[name].[ext]'
             }
 
         ]

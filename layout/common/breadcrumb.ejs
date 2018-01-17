@@ -1,0 +1,31 @@
+<% if (display) { %>
+  <div class="breadcrumb">
+    <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li class="breadcrumb__item">
+        <a href="/" class="breadcrumb__link">
+          <svg class="breadcrumb__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons-sprite.svg#home"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="#" itemprop="item" class="breadcrumb__link">
+          <span itemprop="name">Восстановление данных</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="#" itemprop="item" class="breadcrumb__link">
+          <span itemprop="name">Устройства</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="#" itemprop="item" class="breadcrumb__link">
+          <span itemprop="name">Жесткий диск</span>
+        </a>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </div>
+<% } %>

@@ -5,12 +5,16 @@
         list-style: none;
         padding-left: 0;
         display: flex;
-        font-size: .9em;
+        font-size: .8em;
         margin-bottom: 0;
+        flex-wrap: wrap;
     }
     &__item {
-        padding: 0 15px;
+        padding: 0 10px;
         position: relative;
+        &:first-child {
+            padding-left: 0;
+        }
         &:after {
             position: absolute;
             top: 50%;
@@ -44,8 +48,8 @@
         }
     }
     &__icon {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         fill: #999;
     }
 }
