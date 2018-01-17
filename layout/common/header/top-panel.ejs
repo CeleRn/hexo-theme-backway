@@ -1,0 +1,25 @@
+<ul class="header__top-panel top-panel">
+  <li class="top-panel__item">
+    <a href="#" class="top-panel-link">
+      <%- partial('../svg-sprite-element', {icon: "place", cssSelector: "top-panel-link__icon"}) %>
+      <span class="top-panel-link__text">Москва</span>
+    </a>
+  </li>
+  <li class="top-panel__item">
+    <a href="mailto:<%= site.data.company.email %>" class="top-panel-link">
+      <%- partial('../svg-sprite-element', {icon: "mail", cssSelector: "top-panel-link__icon"}) %>
+      <span class="top-panel-link__text"><%= site.data.company.email %></span>
+    </a>
+  </li>
+  <li class="top-panel__item">
+    <a href="tel:<%= site.data.company.phone %>" class="top-panel-link top-panel-link_phone">
+      <%- partial('../svg-sprite-element', {icon: "phone", cssSelector: "top-panel-link__icon"}) %>
+      <span class="top-panel-link__text"><%= site.data.company.phone %></span>
+    </a>
+  </li>
+  <li class="top-panel__item">
+    <a href="#" class="top-panel-link">
+      <%- partial('../svg-sprite-element', {icon: "search", cssSelector: "top-panel-link__icon"}) %>
+    </a>
+  </li>
+</ul>

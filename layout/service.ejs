@@ -1,0 +1,119 @@
+<%- partial('common/breadcrumb', {display: true}) %>
+<div class="service" itemscope itemtype="http://schema.org/Service">
+  <meta itemprop="serviceType" content="Recovery data" />
+  <meta itemprop="serviceType" content="Восстановление данных" />
+  <%- partial('common/main-title', {area: true}) %>
+  <div class="service__info">
+    <div class="service__list-desc list-desc">
+      <h2 class="list-desc__title">Размеры HDD</h2>
+      <ul class="list-desc__list">
+        <li class="list-desc__list-item">3.5" - для компьютера</li>
+        <li class="list-desc__list-item">2.5" - для ноутбука</li>
+      </ul>
+      <h2 class="list-desc__title">Интерфейсы HDD</h2>
+      <ul class="list-desc__list">
+        <li class="list-desc__list-item">SATA</li>
+        <li class="list-desc__list-item">eSATA</li>
+        <li class="list-desc__list-item">SAS</li>
+        <li class="list-desc__list-item">SCSI</li>
+        <li class="list-desc__list-item">IDE</li>
+        <li class="list-desc__list-item">USB</li>
+      </ul>
+    </div>
+    <div class="service__description description">
+      <div class="description__text" itemprop="description">
+        <p>Наша лаборатория выполняет профессиональный ремонт HDD и восстановление жестких дисков всех типов SATA, SAS, SCSI,
+          IDE (ATA), ведущих производителей жестких дисков в Москве.</p>
+        <p>Качественно, оперативно и по доступной цене выполним восстановление жесткого диска и вернём вашу потерянную информацию
+          с неисправного винчестера любой модели в городе Москва.</p>
+      </div>
+      <div class="description__image">
+        <link href="/assets/images/upload/hdd.jpg" itemprop="image" />
+      </div>
+    </div>
+  </div>
+
+  <%- partial('common/call-to-action/phone') %>
+
+  <div class="service__price price">
+    <div class="price__cost cost" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+      <meta itemprop="lowPrice" content="3000">
+      <meta itemprop="priceCurrency" content="RUB">
+      <h2 class="cost__title">Стоимость восстановления данных</h2>
+      <div class="cost-list" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с логическими неисправностями">
+        <span itemprop="areaServed" itemscope="" itemtype="http://schema.org/City">
+          <meta itemprop="name" content="Москва">
+        </span>
+        <div class="cost-list__text">Логические неисправности (жесткий диск физически исправен)</div>
+        <div class="cost-list__price">от
+          <span itemprop="lowPrice">3000</span>
+          <span itemprop="priceCurrency" content="RUB">₽</span>
+        </div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с ошибками в служебной зоне">
+        <span itemprop="areaServed" itemscope="" itemtype="http://schema.org/City">
+          <meta itemprop="name" content="Москва">
+        </span>
+        <div class="cost-list__text">Ошибки в служебной зоне накопителя</div>
+        <div class="cost-list__price">от
+          <span itemprop="lowPrice">6000</span>
+          <span itemprop="priceCurrency" content="RUB">₽</span>
+        </div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с неисправным контроллером">
+        <div class="cost-list__text">Неисправность контроллера</div>
+        <div class="cost-list__price">от
+          <span itemprop="lowPrice">6000</span>
+          <span itemprop="priceCurrency" content="RUB">₽</span>
+        </div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с залипшими магнитными головками">
+        <div class="cost-list__text">Залипание магнитных головок</div>
+        <div class="cost-list__price">от
+          <span itemprop="lowPrice">9000</span>
+          <span itemprop="priceCurrency" content="RUB">₽</span>
+        </div>
+      </div>
+      <div class="cost-list" itemprop="offers" itemscope="" itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="name" content="Восстановление данных с жесткого диска с неисправным блоком магнитных головок">
+        <div class="cost-list__text">Неисправность блока магнитных головок</div>
+        <div class="cost-list__price">от
+          <span itemprop="lowPrice">12000</span>
+          <span itemprop="priceCurrency" content="RUB">₽</span>
+        </div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Клин подшипника или обрыв обмоток двигателя</div>
+        <div class="cost-list__price">от 12000 ₽</div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Нечитаемые сектора, небольшие повреждения поверхности</div>
+        <div class="cost-list__price">от 9000 ₽</div>
+      </div>
+      <div class="cost-list">
+        <div class="cost-list__text">Значительные повреждения поверхности, царапины, запилы</div>
+        <div class="cost-list__price">от 30000 ₽</div>
+      </div>
+    </div>
+    <div class="price__payment payment">
+      <h2 class="payment__title">Способы оплаты</h2>
+      <ul class="payment-methods-list">
+        <li class="payment-methods-list__item">Visa</li>
+        <li class="payment-methods-list__item">MasterCard</li>
+        <li class="payment-methods-list__item">Yandex Деньги</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- partial('common/call-to-action/order') %>
+
+<%- partial('common/vendors') %>
+<%- partial('common/relink') %>
+
+<%- partial('common/call-to-action/consulting') %>
+

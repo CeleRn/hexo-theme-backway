@@ -1,99 +1,22 @@
 <header class="header">
   <div class="header__top navbar navbar-expand-lg">
     <div class="container">
-      <button class="header__navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#top-menu-content"
-        aria-controls="top-menu-content" aria-expanded="false" aria-label="Toggle navigation">
-        <%- partial('svg-sprite-element', {icon: "menu", cssSelector: "navbar__icon"}) %>
-      </button>
-      <ul class="header__top-panel top-panel">
-        <li class="top-panel__item">
-          <a href="#" class="top-panel-link">
-            <%- partial('svg-sprite-element', {icon: "place", cssSelector: "top-panel-link__icon"}) %>
-            <span class="top-panel-link__text">Москва</span>
-          </a>
-        </li>
-        <li class="top-panel__item">
-          <a href="mailto:<%= site.data.company.email %>" class="top-panel-link">
-            <%- partial('svg-sprite-element', {icon: "mail", cssSelector: "top-panel-link__icon"}) %>
-            <span class="top-panel-link__text"><%= site.data.company.email %></span>
-          </a>
-        </li>
-        <li class="top-panel__item">
-          <a href="tel:<%= site.data.company.phone %>" class="top-panel-link top-panel-link_phone">
-            <%- partial('svg-sprite-element', {icon: "phone", cssSelector: "top-panel-link__icon"}) %>
-            <span class="top-panel-link__text"><%= site.data.company.phone %></span>
-          </a>
-        </li>
-        <li class="top-panel__item">
-          <a href="#" class="top-panel-link">
-            <%- partial('svg-sprite-element', {icon: "search", cssSelector: "top-panel-link__icon"}) %>
-          </a>
-        </li>
-      </ul>
-      <div class="header__top-menu collapse navbar-collapse" id="top-menu-content">
-        <ul class="navbar-nav top-menu">
-          <li class="top-menu__item">
-            <a href="#" class="top-menu__link">О компании</a>
-          </li>
-          <li class="top-menu__item dropdown">
-            <a href="#" class="top-menu__link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Клиентам</a>
-            <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a href="#" class="dropdown-item">Стоимость и способы оплаты</a>
-              <a href="#" class="dropdown-item">Гарантия и конфиденциальность</a>
-              <a href="#" class="dropdown-item">Как забрать данные?</a>
-            </nav>
-          </li>
-
-          <li class="top-menu__item dropdown top-menu__item_hidden-lg-up">
-            <a href="#" class="top-menu__link dropdown-toggle" id="navbarRecovery" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Восстановление данных</a>
-            <nav class="dropdown-menu" aria-labelledby="navbarRecovery">
-              <a href="#" class="dropdown-item">Устройства</a>
-              <a href="#" class="dropdown-item">Операционные системы</a>
-              <a href="#" class="dropdown-item">Типы данных</a>
-              <a href="#" class="dropdown-item">Причины</a>
-              <a href="#" class="dropdown-item">Производители</a>
-            </nav>
-          </li>
-          <li class="top-menu__item top-menu__item_hidden-lg-up">
-            <a href="#" class="top-menu__link">Бесплатные консультации</a>
-          </li>
-          <li class="top-menu__item top-menu__item_hidden-lg-up">
-            <a href="#" class="top-menu__link">Цены</a>
-          </li>
-
-          <li class="top-menu__item">
-            <a href="#" class="top-menu__link">Контакты</a>
-          </li>
-        </ul>
-      </div>
+      <%- partial('header/top-menu', {button: true, menu:false}) %>
+      <%- partial('header/top-panel') %>
+      <%- partial('header/top-menu', {button: false, menu: true}) %>
     </div>
-
   </div>
   <div class="header__middle">
     <div class="container">
-      <div class="logo">
-        <img src="/assets/images/logo_backway.svg" alt="Back way" class="logo__image" />
-      </div>
-      <nav class="main-menu">
-        <a href="#" class="main-menu__link">Восстановление данных</a>
-        <a href="#" class="main-menu__link">Бесплатные консультации</a>
-        <a href="#" class="main-menu__link">Цены</a>
-      </nav>
+      <%- partial('header/logo') %>
+      <%- partial('header/main-menu') %>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container">
       <div class="header__bottom-bg-white"></div>
-      <nav class="second-menu">
-        <a href="#" class="second-menu__item">Устройства</a>
-        <a href="#" class="second-menu__item">Операционные системы</a>
-        <a href="#" class="second-menu__item">Типы данных</a>
-        <a href="#" class="second-menu__item">Причины</a>
-        <a href="#" class="second-menu__item">Производители</a>
-      </nav>
-      <a href="#" class="action-button">Заказать восстановление</a>
+      <%- partial('header/second-menu') %>
+      <%- partial('header/action-button') %>
     </div>
   </div>
 </header>
