@@ -1,4 +1,4 @@
-<% if (display) { %>
+<% if(page.breadcrumbs || page.breadcrumbCurrent) { %>
   <div class="breadcrumb">
     <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
       <li class="breadcrumb__item">
@@ -8,24 +8,24 @@
           </svg>
         </a>
       </li>
+    <% var i=1 %>
+    <% for(var breadcrumb in page.breadcrumbs) { %>
       <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="#" itemprop="item" class="breadcrumb__link">
-          <span itemprop="name">Восстановление данных</span>
-        </a>
-        <meta itemprop="position" content="1" />
+        <a class="breadcrumb__link" itemprop="item" href="<%= page.breadcrumbs[breadcrumb].url %>">
+          <span itemprop="name"><%= page.breadcrumbs[breadcrumb].name %></span></a>
+        <meta itemprop="position" content="<%= i %>" />
+        <% i++; %>
       </li>
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="#" itemprop="item" class="breadcrumb__link">
-          <span itemprop="name">Устройства</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="#" itemprop="item" class="breadcrumb__link">
-          <span itemprop="name">Жесткий диск</span>
-        </a>
-        <meta itemprop="position" content="3" />
-      </li>
+    <% } %>
+    <% if(typeof page.breadcrumbCurrent != "undefined") { %>
+      <% if(page.breadcrumbCurrent) { %>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a class="breadcrumb__link" itemprop="item" href="<%= url_for(page.path) %>">
+            <span itemprop="name"><%= page.title %></span></a>
+          <meta itemprop="position" content="<%= i %>" />
+        </li>
+      <% } %>
+    <% } %>
     </ol>
   </div>
 <% } %>
