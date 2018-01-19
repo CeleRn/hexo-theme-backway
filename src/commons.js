@@ -26,7 +26,7 @@ import 'bootstrap/js/dist/tab';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/collapse';
 
-
+import 'materialize-css/dist/js/materialize';
 // OwlCarousel
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
