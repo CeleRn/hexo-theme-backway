@@ -1,6 +1,6 @@
 <h1 class="main-title" itemprop="name">
-  Восстановление данных с жесткого диска
+  <%= h1Escape(page) %>
   <% if (area) { %>
-    <small class="main-title__small">в Москве и Московской области</small>
+    <small class="main-title__small"><%= config.subdomain.inCityAndRegion %></small>
   <% } %>
 </h1>

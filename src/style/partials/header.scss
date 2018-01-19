@@ -6,11 +6,26 @@
         .container {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
     &__navbar-toggler {
         order: 1;
         outline: 0 !important;
+        .navbar__icon_open {
+            display: block;
+        }
+        .navbar__icon_close {
+            display: none;
+        }
+        &.collapsed {
+            .navbar__icon_open {
+                display: none;
+            }
+            .navbar__icon_close {
+                display: block;
+            }
+        }
     }
     &__top-panel {
         order: 3;
@@ -21,8 +36,11 @@
     &__top-menu {
         order: 2;
         @include media-breakpoint-down(md) {
-            order: 3;
+            order: 4;
         }
+    }
+    &__search {
+        order: 3;
     }
     &__middle {
         .container {
@@ -73,7 +91,7 @@
         margin: 0 5px;
         &_hidden-lg-up {
             display: none;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
                 display: list-item;
             }
         }
@@ -114,7 +132,26 @@
     }
 }
 
-
+.search {
+    flex: 0 0 100%;
+    padding: 5px 15px;
+    &__form {
+        width: 100%;
+    }
+    &__input {
+        outline: none;
+    }
+    &__submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__submit-icon {
+        width: 24px;
+        height: 24px;
+        fill:#666;
+    }
+}
 
 .dropdown-menu {
     @include media-breakpoint-down(md) {
@@ -156,6 +193,22 @@
             color: #000;
         }
     }
+    &_search {
+        .top-panel-link__icon_open {
+            display: block;
+        }
+        .top-panel-link__icon_close {
+            display: none;
+        }
+        &.collapsed {
+            .top-panel-link__icon_open {
+                display: none;
+            }
+            .top-panel-link__icon_close {
+                display: block;
+            }
+        }
+    }
     &__icon {
         height: 18px;
         width: 18px;
@@ -181,6 +234,7 @@
         flex-basis: 100%;
         justify-content: center;
         margin-bottom: 25px;
+        padding: 20px 0;
     }
     &__image {
         width: 100%;

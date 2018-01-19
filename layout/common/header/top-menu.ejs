@@ -1,6 +1,7 @@
 <% if (button) { %>
-  <button class="header__navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#top-menu-content" aria-controls="top-menu-content" aria-expanded="false" aria-label="Toggle navigation">
-    <%- partial('../svg-sprite-element', {icon: "menu", cssSelector: "navbar__icon"}) %>
+  <button class="header__navbar-toggler navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#top-menu-content" aria-controls="top-menu-content" aria-expanded="false" aria-label="Toggle navigation">
+    <%- partial('../svg-sprite-element', {icon: "menu", cssSelector: "navbar__icon navbar__icon_close"}) %>
+    <%- partial('../svg-sprite-element', {icon: "close", cssSelector: "navbar__icon navbar__icon_open"}) %>
   </button>
 <% } %>
 
@@ -21,21 +22,21 @@
     </li>
 
     <li class="top-menu__item dropdown top-menu__item_hidden-lg-up">
-      <a href="#" class="top-menu__link dropdown-toggle" id="navbarRecovery" role="button" data-toggle="dropdown" aria-haspopup="true"
+      <a href="/recovery/" class="top-menu__link dropdown-toggle" id="navbarRecovery" role="button" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">Восстановление данных</a>
       <nav class="dropdown-menu" aria-labelledby="navbarRecovery">
-        <a href="#" class="dropdown-item">Устройства</a>
-        <a href="#" class="dropdown-item">Операционные системы</a>
-        <a href="#" class="dropdown-item">Типы данных</a>
-        <a href="#" class="dropdown-item">Причины</a>
-        <a href="#" class="dropdown-item">Производители</a>
+        <a href="/recovery/devices/" class="dropdown-item">Устройства</a>
+        <a href="/recovery/systems/" class="dropdown-item">Операционные системы</a>
+        <a href="/recovery/data-types/" class="dropdown-item">Типы данных</a>
+        <a href="/recovery/causes/" class="dropdown-item">Причины</a>
+        <a href="/recovery/vendors/" class="dropdown-item">Производители</a>
       </nav>
     </li>
     <li class="top-menu__item top-menu__item_hidden-lg-up">
-      <a href="#" class="top-menu__link">Бесплатные консультации</a>
+      <a href="/consultations/" class="top-menu__link">Бесплатные консультации</a>
     </li>
     <li class="top-menu__item top-menu__item_hidden-lg-up">
-      <a href="#" class="top-menu__link">Цены</a>
+      <a href="/price/" class="top-menu__link">Цены</a>
     </li>
 
     <li class="top-menu__item">

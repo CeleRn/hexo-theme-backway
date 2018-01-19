@@ -84,6 +84,7 @@ require('./icons/search.svg');
 require('./icons/time.svg');
 require('./icons/comment.svg');
 require('./icons/edit.svg');
+require('./icons/close.svg');
 
 // Иконки причин
 require('./icons/crashs/bug.svg');
