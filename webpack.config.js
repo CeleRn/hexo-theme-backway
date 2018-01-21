@@ -47,6 +47,10 @@ module.exports = {
         filename: 'js/[name].js'
     },
     resolve: {
+        alias: {
+            'inputmask.dependencyLib': path.join(__dirname, 'node_modules/jquery.inputmask/extra/dependencyLibs/inputmask.dependencyLib.jqlite.js'),
+            'inputmask': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.js')
+        },
         modules: ['node_modules'],
         extensions: ['.js', ".json"]
     },

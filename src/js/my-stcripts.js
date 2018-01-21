@@ -9,3 +9,25 @@ $(document).ready(function () {
         console.log('Нет элемента для обработки')
     }
 });
+
+
+$(".form-input__input").on('focus', function () {
+    $(this).attr('class', 'form-input__input');
+    var iconElement = $(this).parents('.form__input-block').children(".form__icon");
+    iconElement.attr('class', 'form__icon').addClass('form__icon_hovered');
+}).on('focusout', function () {
+    var iconElement = $(this).parents('.form__input-block').children(".form__icon");
+    var labelElement = $(this).parents('.form-input').children(".form-input__label");
+    iconElement.attr('class', 'form__icon');
+
+    if ($(this).val() != "") {
+        iconElement.addClass('form__icon_success');
+        labelElement.addClass('form-input__label_in-top');
+        $(this).removeClass('form-input__input_invalid').addClass('form-input__input_valid');
+        console.log(labelElement);
+    } else {
+        iconElement.addClass('form__icon_error');
+        labelElement.removeClass('form-input__label_in-top');
+        $(this).removeClass('form-input__input_valid').addClass('form-input__input_invalid');
+    }
+})

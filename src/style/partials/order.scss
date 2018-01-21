@@ -1,0 +1,45 @@
+.order {
+    
+    &__form {
+
+    }
+    &__title {
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        font-size: 1.2em;
+        color: #888;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 3px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #aaa;
+    }
+    &__contacts {
+        @extend .box-block;
+        // background-color: $main-color;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 15px 15px 35px 15px;
+        margin-bottom: 25px;
+    }
+    &__limit {
+        @extend .box-block;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 15px 35px 15px;
+        margin-bottom: 25px;
+    }
+    &__block {
+        &_33 {
+            flex: 0 0 33%;
+            padding: 0 25px;
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    
+}
