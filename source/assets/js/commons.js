@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8dc79cab33e89b711c6f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "81f0c557966c1abc1316"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -18195,6 +18195,13 @@ $(document).ready(function () {
     }
 });
 
+$('.limit').click(function () {
+    $('.limit').removeClass('limit_checked');
+    $(this).addClass('limit_checked');
+    $(this).children('.radio').children('label').children('input').prop('checked', true);
+    console.log($(this).children('.radio').children('label').children('input'));
+});
+
 $(".form-input__input").on('focus', function () {
     $(this).attr('class', 'form-input__input');
     var iconElement = $(this).parents('.form__input-block').children(".form__icon");
@@ -18203,16 +18210,21 @@ $(".form-input__input").on('focus', function () {
     var iconElement = $(this).parents('.form__input-block').children(".form__icon");
     var labelElement = $(this).parents('.form-input').children(".form-input__label");
     iconElement.attr('class', 'form__icon');
-
+    var isRequred = false;
+    if ($(this).prop('required')) {
+        isRequred = true;
+    }
     if ($(this).val() != "") {
         iconElement.addClass('form__icon_success');
         labelElement.addClass('form-input__label_in-top');
         $(this).removeClass('form-input__input_invalid').addClass('form-input__input_valid');
         console.log(labelElement);
     } else {
-        iconElement.addClass('form__icon_error');
         labelElement.removeClass('form-input__label_in-top');
-        $(this).removeClass('form-input__input_valid').addClass('form-input__input_invalid');
+        if (isRequred) {
+            iconElement.addClass('form__icon_error');
+            $(this).removeClass('form-input__input_valid').addClass('form-input__input_invalid');
+        }
     }
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))

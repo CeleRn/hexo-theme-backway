@@ -1,5 +1,4 @@
-.order {
-    
+.consultation {
     &__form {
         @extend .box-block;
         padding-top: 30px;
@@ -15,6 +14,7 @@
         margin: 0;
         padding-bottom: 3px;
         margin-bottom: 35px;
+        text-align: center;
         // border-bottom: 1px solid #aaa;
     }
     &__contacts {
@@ -26,15 +26,7 @@
         padding: 15px 15px 35px 15px;
         // margin-bottom: 25px;
     }
-    &__limit {
-        // @extend .box-block;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 15px 15px 35px 15px;
-        // margin-bottom: 25px;
-    }
-    &__cause {
+    &__question {
         // @extend .box-block;
         display: flex;
         justify-content: center;
@@ -49,15 +41,6 @@
         justify-content: space-between;
         &_33 {
             flex: 0 0 33%;
-            padding: 0 25px;
-            @include media-breakpoint-down(md) {
-                flex: 0 0 100%;
-                margin-bottom: 30px;
-                padding: 0 10px;
-            }
-        }
-        &_50 {
-            flex: 0 0 50%;
             padding: 0 25px;
             @include media-breakpoint-down(md) {
                 flex: 0 0 100%;
@@ -80,43 +63,4 @@
         justify-content: center;
     }
     
-}
-.limit {
-    // border: 1px solid #ededed;
-    cursor: pointer;
-    opacity: .5;
-    &_checked {
-        opacity: 1;
-    }
-    &.form-radio {
-        margin: 0;
-    }
-    &__radio {
-        label {
-            font-size: 1.4em;
-            // text-align: center;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #666666;
-            // border-bottom: 1px solid #dedede;
-            padding-bottom: 3px;
-            margin-bottom: 5px;
-            .limit_checked & {
-                color: $main-color;
-            }
-        }
-        .helper {
-            margin-top: 2px;
-        }
-
-    }
-    &__description {
-        font-size: .9em;
-        color: #333;
-        // font-weight: 300;
-        line-height: 1.2em;
-    }
-    &__title {
-        
-    }
 }
