@@ -97,11 +97,12 @@ require('./icons/crashs/trash.svg');
 require('./icons/crashs/water.svg');
 
 // Иконки файлов
+require('./icons/files/archive.svg');
 require('./icons/files/data.svg');
 require('./icons/files/docs.svg');
-require('./icons/files/images.svg');
-require('./icons/files/musics.svg');
-require('./icons/files/videos.svg');
+require('./icons/files/photo.svg');
+require('./icons/files/music.svg');
+require('./icons/files/video.svg');
 
 // Иконки операционных систем
 require('./icons/systems/apple.svg');
